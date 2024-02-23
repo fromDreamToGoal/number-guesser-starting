@@ -7,4 +7,15 @@ const generateTarget = () => {
     return Math.floor(Math.random() * 10);
 }
 
-console.log(generateTarget());
+const compareGuesses = (human, computer, secretNumber) => {
+    const humanDifference = Math.abs(human - secretNumber);
+    const computerDifference = Math.abs(computer - secretNumber);
+    if (humanDifference <= computerDifference) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+const computer = generateTarget();
+const secretNumber = generateTarget();
