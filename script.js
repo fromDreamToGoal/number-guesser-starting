@@ -30,3 +30,6 @@ function updateScore(winner) {
     }
 }
 
+function advanceRound() {
+    return currentRoundNumber++;
+}
