@@ -11,11 +11,22 @@ const compareGuesses = (human, computer, secretNumber) => {
     const humanDifference = Math.abs(human - secretNumber);
     const computerDifference = Math.abs(computer - secretNumber);
     if (humanDifference <= computerDifference) {
+        //human win
         return true;
     } else {
+        //computer win
         return false;
     }
 }
 
 const computer = generateTarget();
 const secretNumber = generateTarget();
+
+function updateScore(winner) {
+    if (winner === 'human') {
+        humanScore++;
+    } else if (winner === 'computer') {
+        computerScore++;
+    }
+}
+
